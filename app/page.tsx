@@ -1,209 +1,243 @@
-const nowItems = [
-  {
-    index: "01",
-    title: "把想法变成可用的东西",
-    text: "从一个模糊念头出发，整理结构、建立系统，最后交付一个真正能被使用的版本。",
-  },
-  {
-    index: "02",
-    title: "把方法写成可复用流程",
-    text: "不满足于做完一次。把判断、步骤和质量标准沉淀下来，让下一次更快、更稳。",
-  },
-  {
-    index: "03",
-    title: "持续学习，也持续发布",
-    text: "用小而完整的作品检验新知识，让公开输出成为学习过程的一部分。",
-  },
+const productSignals = [
+  "RAG",
+  "MULTI-AGENT",
+  "TOOL CALLING",
+  "GUARDRAILS",
+  "EVALUATION",
 ];
 
 const projects = [
   {
-    number: "001",
-    tag: "DESIGN · BUILD · 2026",
-    title: "个人工作档案",
-    description:
-      "你正在浏览的这个网站：从十个开源个站中提炼方法，再把定位、叙事、证据和辨识度组合成一个完整页面。",
-    status: "LIVE / THIS SITE",
-    className: "project-card project-card--featured",
+    id: "01",
+    eyebrow: "FINTECH / AI SERVICE",
+    title: "贷款业务\n智能客服",
+    statement:
+      "把高频咨询、账户查询和风险兜底组成一条真正可用的服务链路。",
+    context:
+      "Westlake Financial 的还款、账单、账户状态等重复咨询占用人工服务能力。",
+    contribution:
+      "设计“意图识别 → 风险判断 → RAG / 账户只读查询 → 结果校验 → 回复生成”链路，并建立人工保底与 Bad Case 复盘机制。",
+    tags: ["0→1", "RAG", "Agent Workflow", "Function Calling"],
+    accent: "lime",
   },
   {
-    number: "002",
-    tag: "NEXT PROJECT",
-    title: "下一件作品",
-    description:
-      "这里为你的真实项目预留。补充背景、你的贡献、最终结果和链接，就能成为一张完整的案例卡片。",
-    status: "READY TO EDIT",
-    className: "project-card",
+    id: "02",
+    eyebrow: "COMMERCE / DECISION AGENT",
+    title: "P-buyer\n智能导购",
+    statement:
+      "让 AI 从“介绍商品”走向“帮用户完成购买决策”。",
+    context:
+      "面向宠物、3C、母婴与家装等高决策成本品类，解决参数难懂、选择过载和规格不兼容。",
+    contribution:
+      "设计 Coordinator、导购、RAG 问答、多意图编排与转人工 5 类 Agent，定义受控 A2A、实时价库 Tool、硬约束、证据状态和 L0–L3 推荐分级。",
+    tags: ["PRD", "Multi-Agent", "A2A", "Explainable AI"],
+    accent: "cyan",
+  },
+];
+
+const experience = [
+  {
+    period: "2025.04 — 2026.07",
+    company: "大连水滴科技服务有限公司",
+    role: "AI 产品经理",
+    summary:
+      "负责贷款业务智能客服从 0 到 1 产品方案，协同研发完成只读账户接口、权限校验与确定性输出方案。",
   },
   {
-    number: "003",
-    tag: "NOTES · IDEAS",
-    title: "公开笔记",
-    description:
-      "这里可以连接文章、研究记录或阶段性思考。没有真实内容之前，不用虚构，也不必为了完整而填满。",
-    status: "CONTENT SLOT",
-    className: "project-card project-card--dark",
+    period: "2024.08 — 2024.12",
+    company: "天津中科创达科技有限公司",
+    role: "AI 产品经理实习生",
+    summary:
+      "完成 P-buyer 智能导购的用户/企业需求、角色流程、产品架构、Prompt 契约、指标体系与风险护栏设计。",
   },
+];
+
+const principles = [
+  ["01", "先定义问题", "先找到真正的业务矛盾，再决定需要模型、规则还是人工。"],
+  ["02", "让证据进入系统", "关键结论要有来源、版本、状态和适用边界，而不是仅靠模型语气可信。"],
+  ["03", "把风险设计进流程", "低置信度、冲突和高风险场景必须有确定的阻断、澄清或转人工路径。"],
 ];
 
 export default function Home() {
   return (
-    <main>
-      <header className="site-header">
-        <a className="monogram" href="#top" aria-label="返回首页">
-          JZ<span>·</span>
+    <main id="top">
+      <header className="site-nav">
+        <a className="brand" href="#top" aria-label="Jealin 个人网站首页">
+          <span className="brand-mark">J</span>
+          <span>JEALIN / AI PM</span>
         </a>
         <nav aria-label="主导航">
-          <a href="#now">现在</a>
-          <a href="#work">作品</a>
+          <a href="#work">项目</a>
+          <a href="#experience">经历</a>
           <a href="#about">关于</a>
         </nav>
-        <a className="header-contact" href="#contact">
-          联系我 <span aria-hidden="true">↘</span>
+        <a className="availability" href="mailto:15241522260@163.com">
+          <i aria-hidden="true" /> OPEN TO TALK
         </a>
       </header>
 
-      <section className="hero" id="top" aria-labelledby="hero-title">
-        <div className="hero-kicker">
-          <span>PERSONAL FIELD NOTES</span>
-          <span>ARCHIVE / 001</span>
+      <section className="hero" aria-labelledby="hero-title">
+        <div className="hero-grid" aria-hidden="true" />
+        <div className="hero-topline">
+          <span>PORTFOLIO / 2026</span>
+          <span>DALIAN, CHINA</span>
         </div>
 
-        <div className="hero-grid">
+        <div className="hero-layout">
           <div className="hero-copy">
-            <p className="eyebrow">你好，我是</p>
+            <p className="eyebrow">HELLO, I&apos;M JEALIN ZHAO.</p>
             <h1 id="hero-title">
-              Jealin
-              <br />
-              <span>Zhao</span>
+              让 AI 不只会回答，
+              <span>还会完成任务。</span>
             </h1>
-            <p className="hero-statement">
-              把零散的想法，
-              <br />
-              做成<span>可以被使用</span>的东西。
+            <p className="hero-lede">
+              AI 产品经理，专注 RAG、Multi-Agent 与 Tool Calling。
+              我把复杂业务拆成可解释、可验证、可安全交付的产品系统。
             </p>
+            <div className="hero-actions">
+              <a className="glow-button" href="#work">
+                <span>查看核心项目</span>
+                <b aria-hidden="true">↘</b>
+              </a>
+              <a className="text-link" href="mailto:15241522260@163.com">
+                联系我 <span aria-hidden="true">↗</span>
+              </a>
+            </div>
           </div>
 
-          <aside className="hero-aside" aria-label="当前状态">
-            <div className="orbit" aria-hidden="true">
-              <span>MAKE · LEARN · PUBLISH · </span>
-              <b>↗</b>
+          <aside className="system-panel" aria-label="AI 产品能力系统图">
+            <div className="panel-scan" aria-hidden="true" />
+            <div className="panel-head">
+              <span>SYSTEM MAP</span>
+              <span>ONLINE</span>
             </div>
-            <p>
-              这是一个持续更新的个人档案，记录我正在探索的方向、已经完成的作品，以及下一步想做的事。
-            </p>
-            <dl className="status-list">
-              <div>
-                <dt>NOW</dt>
-                <dd>BUILDING IN PUBLIC</dd>
+            <div className="system-core">
+              <span className="orbit orbit-one" />
+              <span className="orbit orbit-two" />
+              <div className="core-label">
+                <strong>PRODUCT</strong>
+                <small>DECISION LAYER</small>
               </div>
-              <div>
-                <dt>MODE</dt>
-                <dd>CURIOUS / PRACTICAL</dd>
-              </div>
-              <div>
-                <dt>UPDATED</dt>
-                <dd>2026.08</dd>
-              </div>
-            </dl>
+              <span className="node node-rag">RAG</span>
+              <span className="node node-agent">AGENT</span>
+              <span className="node node-tool">TOOL</span>
+              <span className="node node-safe">SAFE</span>
+            </div>
+            <div className="panel-foot">
+              <span>INPUT → DECISION → ACTION</span>
+              <span>TRACEABLE BY DESIGN</span>
+            </div>
           </aside>
         </div>
 
-        <a className="scroll-note" href="#now">
-          向下查看档案 <span aria-hidden="true">↓</span>
-        </a>
-      </section>
-
-      <section className="section section-now" id="now" aria-labelledby="now-title">
-        <div className="section-heading">
-          <p>01 / NOW</p>
-          <h2 id="now-title">我现在关心的事</h2>
-        </div>
-        <div className="now-list">
-          {nowItems.map((item) => (
-            <article className="now-item" key={item.index}>
-              <span>{item.index}</span>
-              <h3>{item.title}</h3>
-              <p>{item.text}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="section section-work" id="work" aria-labelledby="work-title">
-        <div className="section-heading section-heading--split">
+        <div className="signal-ticker" aria-label="核心能力">
           <div>
-            <p>02 / SELECTED WORK</p>
-            <h2 id="work-title">作品不是陈列，<br />而是证据。</h2>
+            {[...productSignals, ...productSignals].map((signal, index) => (
+              <span key={`${signal}-${index}`}>{signal}<i aria-hidden="true" /></span>
+            ))}
           </div>
-          <p className="section-intro">
-            每个项目都应该说明：为什么做、我做了什么、最后改变了什么。真实资料到位后，这里可以直接替换。
-          </p>
+        </div>
+      </section>
+
+      <section className="proof-strip" aria-label="快速事实">
+        <div><strong>02</strong><span>CORE AI PROJECTS</span></div>
+        <div><strong>0→1</strong><span>PRODUCT PRACTICE</span></div>
+        <div><strong>RAG · AGENT · TOOL</strong><span>PRODUCT STACK</span></div>
+      </section>
+
+      <section className="section work" id="work" aria-labelledby="work-title">
+        <div className="section-label"><span>01</span> SELECTED WORK</div>
+        <div className="section-heading">
+          <h2 id="work-title">用项目证明，<br />AI 如何进入业务。</h2>
+          <p>两个项目，两种任务类型：一个让服务更高效，一个帮用户做更好的决策。</p>
         </div>
 
-        <div className="project-grid">
+        <div className="project-list">
           {projects.map((project) => (
-            <article className={project.className} key={project.number}>
-              <div className="project-meta">
-                <span>{project.number}</span>
-                <span>{project.tag}</span>
+            <article className={`project-card project-card--${project.accent}`} key={project.id}>
+              <div className="card-glow" aria-hidden="true" />
+              <div className="project-index">
+                <span>{project.id}</span>
+                <span>{project.eyebrow}</span>
               </div>
-              <div>
-                <h3>{project.title}</h3>
-                <p>{project.description}</p>
+              <div className="project-main">
+                <h3>{project.title.split("\n").map((line) => <span key={line}>{line}</span>)}</h3>
+                <p className="project-statement">{project.statement}</p>
               </div>
-              <div className="project-status">
-                <span>{project.status}</span>
-                <span aria-hidden="true">↗</span>
+              <div className="project-detail">
+                <div>
+                  <span className="detail-label">CONTEXT</span>
+                  <p>{project.context}</p>
+                </div>
+                <div>
+                  <span className="detail-label">MY CONTRIBUTION</span>
+                  <p>{project.contribution}</p>
+                </div>
+              </div>
+              <div className="tag-row">
+                {project.tags.map((tag) => <span key={tag}>{tag}</span>)}
               </div>
             </article>
           ))}
         </div>
       </section>
 
-      <section className="section section-about" id="about" aria-labelledby="about-title">
+      <section className="section experience" id="experience" aria-labelledby="experience-title">
+        <div className="section-label"><span>02</span> EXPERIENCE</div>
+        <div className="experience-layout">
+          <div>
+            <h2 id="experience-title">在业务和技术之间，<br />让系统落地。</h2>
+            <p className="experience-note">SOFTWARE ENGINEERING → AI PRODUCT MANAGEMENT</p>
+          </div>
+          <div className="timeline">
+            {experience.map((item) => (
+              <article key={item.period}>
+                <div className="timeline-dot" aria-hidden="true" />
+                <time>{item.period}</time>
+                <h3>{item.company}</h3>
+                <strong>{item.role}</strong>
+                <p>{item.summary}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section about" id="about" aria-labelledby="about-title">
+        <div className="section-label"><span>03</span> HOW I WORK</div>
         <div className="section-heading">
-          <p>03 / OPERATING PRINCIPLES</p>
-          <h2 id="about-title">我的工作方式</h2>
+          <h2 id="about-title">我不追求“更像 AI”，<br />我追求“更可用”。</h2>
+          <p>技术能力是起点，业务结果、可追溯性和风险边界才是产品完成的标志。</p>
         </div>
         <div className="principles">
-          <article>
-            <span>清晰</span>
-            <h3>先把问题说清楚</h3>
-            <p>好的执行始于正确的问题。先找到真正要解决的矛盾，再选择工具和形式。</p>
-          </article>
-          <article>
-            <span>证据</span>
-            <h3>让结果替表达作证</h3>
-            <p>少一点模糊形容词，多一点可以查看、使用、验证和继续迭代的具体成果。</p>
-          </article>
-          <article>
-            <span>演化</span>
-            <h3>先完成，再持续变好</h3>
-            <p>把第一版做小、做完整，在真实反馈中生长，而不是永远停留在准备阶段。</p>
-          </article>
+          {principles.map(([index, title, description]) => (
+            <article key={index}>
+              <span>{index}</span>
+              <h3>{title}</h3>
+              <p>{description}</p>
+            </article>
+          ))}
+        </div>
+        <div className="about-meta">
+          <div><span>EDUCATION</span><strong>大连东软信息学院 · 软件工程本科</strong></div>
+          <div><span>RECOGNITION</span><strong>国家励志奖学金 · “互联网+”创新创业大赛</strong></div>
         </div>
       </section>
 
       <section className="contact" id="contact" aria-labelledby="contact-title">
-        <p>04 / CONTACT</p>
-        <div className="contact-grid">
-          <h2 id="contact-title">
-            有一件值得
-            <br />
-            一起做的事？
-          </h2>
-          <div className="contact-copy">
-            <p>把目标、背景和你希望推进的下一步发给我。联系方式可在这里替换成你的真实邮箱或社交账号。</p>
-            <span className="contact-placeholder">EMAIL / GITHUB / WECHAT — TO BE ADDED</span>
-          </div>
-        </div>
+        <div className="contact-noise" aria-hidden="true" />
+        <p className="section-label"><span>04</span> CONTACT</p>
+        <h2 id="contact-title">有一个复杂的 AI 产品问题？<br /><em>我们可以一起把它拆清楚。</em></h2>
+        <a className="contact-cta" href="mailto:15241522260@163.com">
+          <span>15241522260@163.com</span>
+          <b aria-hidden="true">↗</b>
+        </a>
       </section>
 
       <footer>
-        <p>© 2026 JEALIN ZHAO</p>
-        <p>DESIGNED AS A LIVING ARCHIVE</p>
-        <a href="#top">回到顶部 ↑</a>
+        <span>© 2026 JEALIN ZHAO</span>
+        <span>AI PRODUCT MANAGER / DALIAN</span>
+        <a href="#top">BACK TO TOP ↑</a>
       </footer>
     </main>
   );
