@@ -18,7 +18,7 @@ const projects = [
     contribution:
       "设计“意图识别 → 风险判断 → RAG / 账户只读查询 → 结果校验 → 回复生成”链路，并建立人工保底与 Bad Case 复盘机制。",
     tags: ["0→1", "RAG", "Agent Workflow", "Function Calling"],
-    accent: "lime",
+    accent: "violet",
   },
   {
     id: "02",
@@ -31,7 +31,7 @@ const projects = [
     contribution:
       "设计 Coordinator、导购、RAG 问答、多意图编排与转人工 5 类 Agent，定义受控 A2A、实时价库 Tool、硬约束、证据状态和 L0–L3 推荐分级。",
     tags: ["PRD", "Multi-Agent", "A2A", "Explainable AI"],
-    accent: "cyan",
+    accent: "blue",
   },
 ];
 
@@ -77,7 +77,9 @@ export default function Home() {
       </header>
 
       <section className="hero" aria-labelledby="hero-title">
-        <div className="hero-grid" aria-hidden="true" />
+        <div className="star-field star-field--near" aria-hidden="true" />
+        <div className="star-field star-field--far" aria-hidden="true" />
+        <div className="hero-orbit" aria-hidden="true" />
         <div className="hero-topline">
           <span>PORTFOLIO / 2026</span>
           <span>DALIAN, CHINA</span>
@@ -105,18 +107,18 @@ export default function Home() {
             </div>
           </div>
 
-          <aside className="system-panel" aria-label="AI 产品能力系统图">
+          <aside className="system-panel" aria-label="AI 产品能力星图">
             <div className="panel-scan" aria-hidden="true" />
             <div className="panel-head">
-              <span>SYSTEM MAP</span>
-              <span>ONLINE</span>
+              <span>PRODUCT UNIVERSE</span>
+              <span>IN ORBIT</span>
             </div>
             <div className="system-core">
               <span className="orbit orbit-one" />
               <span className="orbit orbit-two" />
               <div className="core-label">
-                <strong>PRODUCT</strong>
-                <small>DECISION LAYER</small>
+                <strong>JEALIN</strong>
+                <small>PRODUCT CORE</small>
               </div>
               <span className="node node-rag">RAG</span>
               <span className="node node-agent">AGENT</span>
@@ -124,7 +126,7 @@ export default function Home() {
               <span className="node node-safe">SAFE</span>
             </div>
             <div className="panel-foot">
-              <span>INPUT → DECISION → ACTION</span>
+              <span>DISCOVER → DECIDE → DELIVER</span>
               <span>TRACEABLE BY DESIGN</span>
             </div>
           </aside>
@@ -226,6 +228,7 @@ export default function Home() {
 
       <section className="contact" id="contact" aria-labelledby="contact-title">
         <div className="contact-noise" aria-hidden="true" />
+        <div className="contact-orbit" aria-hidden="true" />
         <p className="section-label"><span>04</span> CONTACT</p>
         <h2 id="contact-title">有一个复杂的 AI 产品问题？<br /><em>我们可以一起把它拆清楚。</em></h2>
         <a className="contact-cta" href="mailto:15241522260@163.com">
