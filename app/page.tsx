@@ -113,17 +113,25 @@ export default function Home() {
               <span>PRODUCT UNIVERSE</span>
               <span>IN ORBIT</span>
             </div>
-            <div className="system-core">
-              <span className="orbit orbit-one" />
-              <span className="orbit orbit-two" />
-              <div className="core-label">
-                <strong>JEALIN</strong>
-                <small>PRODUCT CORE</small>
-              </div>
-              <span className="node node-rag">RAG</span>
-              <span className="node node-agent">AGENT</span>
-              <span className="node node-tool">TOOL</span>
-              <span className="node node-safe">SAFE</span>
+            <div className="cosmos-map" aria-hidden="true">
+              <span className="cosmos-ring cosmos-ring--one" />
+              <span className="cosmos-ring cosmos-ring--two" />
+              <span className="cosmos-ring cosmos-ring--three" />
+              <span className="cosmos-axis cosmos-axis--x" />
+              <span className="cosmos-axis cosmos-axis--y" />
+              <span className="orbit-dot orbit-dot--one" />
+              <span className="orbit-dot orbit-dot--two" />
+              <span className="orbit-dot orbit-dot--three" />
+              <div className="core-planet"><span>✦</span></div>
+              <span className="satellite satellite--star">✦</span>
+              <span className="satellite satellite--chart">▥</span>
+              <span className="satellite satellite--person">●</span>
+              <span className="satellite satellite--check">✓</span>
+              <span className="satellite satellite--pie">◔</span>
+              <span className="satellite satellite--flow">⌘</span>
+              <span className="satellite satellite--chat">•••</span>
+              <span className="mini-planet mini-planet--one" />
+              <span className="mini-planet mini-planet--two" />
             </div>
             <div className="panel-foot">
               <span>DISCOVER → DECIDE → DELIVER</span>
