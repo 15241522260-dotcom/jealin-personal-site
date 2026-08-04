@@ -1,4 +1,4 @@
-const productSignals = ["RAG", "MULTI-AGENT", "TOOL CALLING", "GUARDRAILS", "EVALUATION"];
+const productSignals = ["RAG", "MULTI-AGENT", "TOOL CALLING", "SQL GENERATION", "GUARDRAILS", "EVALUATION"];
 
 const projects = [
   {
@@ -22,6 +22,22 @@ const projects = [
     tags: ["PRD", "Multi-Agent", "A2A", "Explainable AI"],
     accent: "blue",
   },
+  {
+    id: "03",
+    eyebrow: "INSURANCE / AI TESTING",
+    title: "数据中台\nAI 测试助手",
+    statement: "先生成可追溯测试分析，再生成 SQL，把百条规模用例从人工梳理变成人机协同。",
+    context: "面向保险数据中台测试团队，解决百条规模用例依赖人工梳理、重复编写及结果难追溯的问题。",
+    contribution: "聚合语雀需求与模型文档、元数据、历史用例和规则；先生成可追溯测试分析，再生成 SQL，经人工审核后批量执行。",
+    tags: ["MVP / PoC", "RAG", "SQL Generation", "Human-in-the-loop"],
+    accent: "pink",
+    wide: true,
+    metrics: [
+      ["93.3%", "关键规则覆盖率"],
+      ["82.4%", "AI 候选用例直接采纳率"],
+      ["88.7%", "SQL 首次执行成功率"],
+    ],
+  },
 ];
 
 const experience = [
@@ -29,7 +45,7 @@ const experience = [
     period: "2025.04 — 2026.07",
     company: "大连水滴科技服务有限公司",
     role: "AI 产品经理",
-    summary: "负责贷款业务智能客服从 0 到 1 产品方案，协同研发完成只读账户接口、权限校验与确定性输出方案。",
+    summary: "负责贷款业务智能客服从 0 到 1 产品方案，并推进保险数据中台 AI 测试助手 PoC：设计可追溯测试分析、SQL 生成与人工审核链路，通过 100 条合成金标用例完成方案验证。",
   },
   {
     period: "2024.08 — 2024.12",
@@ -90,15 +106,15 @@ export default function Home() {
       </section>
 
       <section className="proof-strip" aria-label="快速事实">
-        <div><strong>02</strong><span>CORE AI PROJECTS</span></div><div><strong>0→1</strong><span>PRODUCT PRACTICE</span></div><div><strong>RAG · AGENT · TOOL</strong><span>PRODUCT STACK</span></div>
+        <div><strong>03</strong><span>CORE AI PROJECTS</span></div><div><strong>0→1</strong><span>PRODUCT PRACTICE</span></div><div><strong>RAG · AGENT · SQL</strong><span>PRODUCT STACK</span></div>
       </section>
 
       <section className="section work" id="work" aria-labelledby="work-title">
         <div className="section-label"><span>01</span> SELECTED WORK</div>
-        <div className="section-heading"><h2 id="work-title">用项目证明，<br />AI 如何进入业务。</h2><p>两个项目，两种任务类型：一个让服务更高效，一个帮用户做更好的决策。</p></div>
+        <div className="section-heading"><h2 id="work-title">用项目证明，<br />AI 如何进入业务。</h2><p>三个项目，覆盖客户服务、购买决策与测试生产力，展示 AI 从交互到执行的不同产品形态。</p></div>
         <div className="project-list">
           {projects.map((project) => (
-            <article className={`project-card project-card--${project.accent}${project.href ? " project-card--clickable" : ""}`} key={project.id}>
+            <article className={`project-card project-card--${project.accent}${project.href ? " project-card--clickable" : ""}${project.wide ? " project-card--wide" : ""}`} key={project.id}>
               {project.href && <a className="project-click-target" href={project.href} aria-label="查看贷款业务智能客服完整案例" />}
               <div className="card-glow" aria-hidden="true" />
               <div className="project-index"><span>{project.id}</span><span>{project.eyebrow}</span></div>
@@ -107,6 +123,7 @@ export default function Home() {
                 <div><span className="detail-label">CONTEXT</span><p>{project.context}</p></div>
                 <div><span className="detail-label">MY CONTRIBUTION</span><p>{project.contribution}</p></div>
               </div>
+              {project.metrics && <div className="project-metrics" aria-label="方案验证指标">{project.metrics.map(([value, label]) => <div key={label}><strong>{value}</strong><span>{label}</span></div>)}</div>}
               <div className="project-card-foot">
                 <div className="tag-row">{project.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
                 {project.href && <span className="view-case">查看完整案例 <b aria-hidden="true">↗</b></span>}

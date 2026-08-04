@@ -23,6 +23,11 @@ test("renders Jealin's portfolio content", async () => {
   assert.match(html, /让 AI 不只会回答/);
   assert.match(html, /贷款业务/);
   assert.match(html, /P-buyer/);
+  assert.match(html, /数据中台/);
+  assert.match(html, /AI 测试助手/);
+  assert.match(html, /93\.3%/);
+  assert.match(html, /82\.4%/);
+  assert.match(html, /88\.7%/);
   assert.match(html, /Multi-Agent/);
   assert.match(html, /\/projects\/westlake-ai-service/);
   assert.match(html, /查看完整案例/);

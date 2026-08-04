@@ -315,7 +315,12 @@ h2 { margin: 0; color: var(--ink); font-size: clamp(3rem,6.3vw,7.4rem); font-wei
 .project-card::after { position: absolute; z-index: -1; inset: 1px; border-radius: 27px; background: radial-gradient(circle at 82% 10%,color-mix(in srgb,var(--card-accent) 18%,transparent),transparent 30%),linear-gradient(145deg,rgba(255,255,255,.95),rgba(246,241,255,.92)); content: ""; }
 .project-card:hover { box-shadow: 0 32px 85px rgba(91,61,137,.2); transform: translateY(-7px); }
 .project-card:hover::before { opacity: 1; }
-.project-card--violet { --card-accent: var(--violet); } .project-card--blue { --card-accent: var(--blue); }
+.project-card--violet { --card-accent: var(--violet); } .project-card--blue { --card-accent: var(--blue); } .project-card--pink { --card-accent: #c76bea; }
+.project-card--wide { grid-column: 1/-1; min-height: 590px; }
+.project-card--wide .project-main { grid-template-columns: .8fr 1.2fr; }
+.project-card--wide .project-main h3 { max-width: 760px; }
+.project-card--wide .project-statement { max-width: 680px; justify-self: end; }
+.project-card--wide .project-detail { grid-template-columns: .7fr 1.3fr; }
 .project-card--clickable { cursor: pointer; }
 .project-card--clickable:hover .view-case b { transform: translate(4px,-4px); }
 .project-click-target { position: absolute; z-index: 6; inset: 0; border-radius: inherit; }
@@ -337,6 +342,10 @@ h2 { margin: 0; color: var(--ink); font-size: clamp(3rem,6.3vw,7.4rem); font-wei
 .tag-row span { padding: .55rem .75rem; border: 1px solid rgba(139,92,246,.17); border-radius: 999px; background: rgba(244,239,255,.72); color: var(--muted); font-size: .48rem; }
 .view-case { display: inline-flex; flex: 0 0 auto; gap: .6rem; align-items: center; padding: .55rem 0; color: var(--violet-deep); font-family: var(--mono); font-size: .52rem; font-weight: 700; letter-spacing: .06em; }
 .view-case b { font-size: .8rem; transition: transform 180ms ease; }
+.project-metrics { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; margin-top: 2rem; overflow: hidden; border: 1px solid rgba(139,92,246,.14); border-radius: 18px; background: rgba(139,92,246,.12); }
+.project-metrics div { display: flex; min-height: 112px; padding: 1.15rem; background: rgba(255,255,255,.64); flex-direction: column; justify-content: center; }
+.project-metrics strong { color: var(--card-accent); font-family: var(--mono); font-size: clamp(1.4rem,2.5vw,2.4rem); letter-spacing: -.05em; }
+.project-metrics span { margin-top: .6rem; color: var(--muted); font-size: .58rem; line-height: 1.45; }
 
 .case-page { background: var(--bg); }
 .case-nav { position: sticky; top: 0; z-index: 60; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; min-height: 72px; padding: 0 clamp(1.2rem,3vw,3.5rem); border-bottom: 1px solid var(--line); background: rgba(248,244,255,.84); backdrop-filter: blur(20px) saturate(135%); }
@@ -529,6 +538,7 @@ footer span:nth-child(2) { text-align: center; } footer a { justify-self: end; c
   .section-heading,.about .section-heading,.experience-layout { grid-template-columns: 1fr; }
   .section-heading > p { max-width: 620px; margin-top: 1.5rem; }
   .project-list { grid-template-columns: 1fr; } .project-card { min-height: 620px; }
+  .project-card--wide { grid-column: auto; }
   .case-nav { grid-template-columns: 1fr auto; }
   .case-nav .brand { display: none; }
   .project-hero-proof { width: 100%; }
@@ -555,7 +565,11 @@ footer span:nth-child(2) { text-align: center; } footer a { justify-self: end; c
   .project-card { min-height: 0; padding: 1.2rem; border-radius: 20px; }
   .project-index span:last-child { max-width: 60%; text-align: right; }
   .project-main { grid-template-columns: 1fr; margin-top: 3.4rem; }
+  .project-card--wide .project-main,.project-card--wide .project-detail { grid-template-columns: 1fr; }
+  .project-card--wide .project-statement { justify-self: start; }
   .project-detail { grid-template-columns: 1fr; padding-top: 3.4rem; }
+  .project-metrics { grid-template-columns: 1fr; }
+  .project-metrics div { min-height: 86px; }
   .project-card-foot { align-items: flex-start; flex-direction: column; }
   .case-nav { min-height: 64px; }
   .project-hero { min-height: auto; }
