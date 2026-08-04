@@ -144,9 +144,14 @@ a:focus-visible {
 .hero-topline { position: relative; z-index: 2; display: flex; justify-content: space-between; color: var(--muted); font-size: .58rem; }
 .hero-layout { position: relative; z-index: 2; display: grid; grid-template-columns: minmax(0,1.65fr) minmax(340px,.75fr); gap: clamp(2.4rem,8vw,9rem); align-items: center; min-height: calc(100svh - 172px); }
 .eyebrow { margin: 0 0 clamp(1.4rem,3vw,2.4rem); color: var(--violet-deep); font-family: var(--mono); font-size: clamp(.68rem,.8vw,.84rem); font-weight: 700; letter-spacing: .12em; }
+.hero-name { display: flex; gap: .7rem; align-items: baseline; margin: 0 0 clamp(1.5rem,3vw,2.7rem); color: var(--ink); font-size: clamp(1.05rem,1.45vw,1.5rem); letter-spacing: -.025em; }
+.hero-name span { font-family: var(--mono); font-weight: 750; letter-spacing: .02em; }
+.hero-name i { color: var(--violet); font-family: var(--mono); font-size: .85em; font-style: normal; font-weight: 500; }
+.hero-name strong { color: var(--violet-deep); font-size: 1.08em; font-weight: 650; }
 
 h1 { max-width: 1100px; margin: 0; color: var(--ink); font-size: clamp(4rem,8.5vw,9.2rem); font-weight: 560; letter-spacing: -.075em; line-height: .91; }
 h1 span { display: block; background: linear-gradient(105deg, #7649dc, #9d6ff1 46%, #6688e9); background-clip: text; color: transparent; text-shadow: 0 12px 35px rgba(121,82,218,.15); }
+.hero-copy h1 { max-width: 980px; font-size: clamp(3.6rem,7.25vw,7.85rem); line-height: .94; }
 .hero-lede { max-width: 690px; margin: clamp(1.8rem,4vw,3.4rem) 0 0; color: var(--muted); font-size: clamp(.95rem,1.25vw,1.18rem); line-height: 1.8; }
 .hero-actions { display: flex; gap: 1.4rem; align-items: center; margin-top: 2.2rem; }
 
@@ -555,6 +560,8 @@ footer span:nth-child(2) { text-align: center; } footer a { justify-self: end; c
   .site-nav { min-height: 64px; } .availability { font-size: 0; } .availability i { width: 9px; height: 9px; }
   .hero { min-height: auto; } .hero-layout { min-height: auto; padding: 4.5rem 0 3rem; }
   h1 { font-size: clamp(3.4rem,16vw,5.4rem); } .hero-actions { align-items: stretch; flex-direction: column; }
+  .hero-copy h1 { font-size: clamp(3.1rem,13.5vw,4.8rem); }
+  .hero-name { font-size: 1rem; }
   .glow-button { width: 100%; } .text-link { width: max-content; }
   .system-panel { min-height: 360px; border-radius: 32px 32px 20px 20px; }
   .cosmos-map { width: 310px; }

@@ -11,7 +11,7 @@ export default function WestlakeProjectPage() {
     <main className="case-page" id="top">
       <header className="case-nav">
         <a className="case-back" href="/#work"><span aria-hidden="true">←</span> 返回作品集</a>
-        <a className="brand" href="/" aria-label="Jealin 个人网站首页"><span className="brand-mark">J</span><span>JEALIN / AI PM</span></a>
+        <a className="brand" href="/" aria-label="Jealin 个人网站首页"><span className="brand-mark">J</span><span>JEALIN + 赵佳琳 / AI PM</span></a>
         <a className="availability" href="mailto:15241522260@163.com"><i aria-hidden="true" /> OPEN TO TALK</a>
       </header>
 
@@ -34,7 +34,7 @@ export default function WestlakeProjectPage() {
       <section className="case-next">
         <p>BACK TO SELECTED WORK</p><a href="/#work"><span>继续查看作品集</span><b aria-hidden="true">↗</b></a>
       </section>
-      <footer><span>© 2026 JEALIN ZHAO</span><span>AI PRODUCT MANAGER / DALIAN</span><a href="#top">BACK TO TOP ↑</a></footer>
+      <footer><span>© 2026 JEALIN + 赵佳琳</span><span>AI PRODUCT MANAGER / DALIAN</span><a href="#top">BACK TO TOP ↑</a></footer>
     </main>
   );
 }
