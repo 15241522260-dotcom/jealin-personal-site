@@ -21,7 +21,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
   return {
     title: "Jealin Zhao — AI 产品经理",
-    description: "Jealin Zhao 的浅紫星空 AI 产品作品集：RAG、Multi-Agent、Tool Calling 与可验证的 AI 产品系统。",
+    description: "Jealin Zhao 的浅紫星空 AI 产品作品集：从用户问题、产品形态和信息架构，到 RAG、Agent 与安全交付。",
     openGraph: {
       title: "Jealin Zhao — AI 产品经理",
       description: "让 AI 不只会回答，还会完成任务。",

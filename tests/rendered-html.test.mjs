@@ -24,5 +24,10 @@ test("renders Jealin's portfolio content", async () => {
   assert.match(html, /贷款业务/);
   assert.match(html, /P-buyer/);
   assert.match(html, /Multi-Agent/);
+  assert.match(html, /PRODUCT FORM/);
+  assert.match(html, /INFORMATION ARCHITECTURE/);
+  assert.match(html, /账户与还款/);
+  assert.match(html, /付款记录/);
+  assert.match(html, /操作与人工帮助/);
   assert.doesNotMatch(html, /Your site is taking shape|READY TO EDIT|TO BE ADDED/);
 });
