@@ -1,13 +1,13 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 
-async function render() {
+async function render(pathname = "/") {
   const workerUrl = new URL("../dist/server/index.js", import.meta.url);
   workerUrl.searchParams.set("test", `${process.pid}-${Date.now()}`);
   const { default: worker } = await import(workerUrl.href);
 
   return worker.fetch(
-    new Request("http://localhost/", { headers: { accept: "text/html" } }),
+    new Request(`http://localhost${pathname}`, { headers: { accept: "text/html" } }),
     { ASSETS: { fetch: async () => new Response("Not found", { status: 404 }) } },
     { waitUntil() {}, passThroughOnException() {} },
   );
@@ -24,10 +24,21 @@ test("renders Jealin's portfolio content", async () => {
   assert.match(html, /贷款业务/);
   assert.match(html, /P-buyer/);
   assert.match(html, /Multi-Agent/);
+  assert.match(html, /\/projects\/westlake-ai-service/);
+  assert.match(html, /查看完整案例/);
+  assert.doesNotMatch(html, /PRODUCT FORM \/ INFORMATION ARCHITECTURE/);
+  assert.doesNotMatch(html, /Your site is taking shape|READY TO EDIT|TO BE ADDED/);
+});
+
+test("renders the Westlake project detail page", async () => {
+  const response = await render("/projects/westlake-ai-service");
+  assert.equal(response.status, 200);
+  const html = await response.text();
+  assert.match(html, /贷款业务/);
   assert.match(html, /PRODUCT FORM/);
   assert.match(html, /INFORMATION ARCHITECTURE/);
   assert.match(html, /账户与还款/);
   assert.match(html, /付款记录/);
   assert.match(html, /操作与人工帮助/);
-  assert.doesNotMatch(html, /Your site is taking shape|READY TO EDIT|TO BE ADDED/);
+  assert.match(html, /返回作品集/);
 });
