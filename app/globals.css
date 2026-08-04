@@ -505,11 +505,6 @@ h2 { margin: 0; color: var(--ink); font-size: clamp(3rem,6.3vw,7.4rem); font-wei
 .principles > article > span { color: var(--violet); font-family: var(--mono); font-size: .58rem; }
 .principles h3 { margin: 5rem 0 1rem; color: var(--ink); font-size: clamp(1.4rem,2vw,2rem); letter-spacing: -.04em; }
 .principles p { margin: 0; }
-.about-meta { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem; }
-.about-meta div { padding: 1.5rem; border: 1px solid rgba(255,255,255,.72); border-radius: 18px; background: rgba(255,255,255,.4); }
-.about-meta span,.about-meta strong { display: block; }
-.about-meta span { color: var(--muted); font-family: var(--mono); font-size: .52rem; letter-spacing: .08em; }
-.about-meta strong { margin-top: 1rem; font-size: .86rem; font-weight: 560; }
 
 .contact { position: relative; isolation: isolate; padding: clamp(5.5rem,10vw,11rem) clamp(1.2rem,3vw,3.5rem); overflow: hidden; background: linear-gradient(135deg,#ded0ff,#f0e9ff 52%,#cad9ff); color: var(--ink); }
 .contact-noise { position: absolute; z-index: -1; inset: 0; opacity: .25; background-image: radial-gradient(rgba(104,64,199,.58) .7px,transparent .8px); background-size: 27px 27px; }
@@ -552,7 +547,7 @@ footer span:nth-child(2) { text-align: center; } footer a { justify-self: end; c
   .shape-copy { max-width: 680px; }
   .principles { grid-template-columns: 1fr; }
   .principles article,.principles article + article { min-height: 0; padding: 1.8rem 0 2.2rem; border-right: 0; border-bottom: 1px solid var(--line); }
-  .principles h3 { margin-top: 2rem; } .about-meta { grid-template-columns: 1fr; }
+  .principles h3 { margin-top: 2rem; }
 }
 
 @media (max-width: 640px) {
@@ -599,7 +594,7 @@ footer span:nth-child(2) { text-align: center; } footer a { justify-self: end; c
   .tree-branches article::before { left: 50%; height: .7rem; }
   .dynamic-layer { grid-template-columns: 1fr; }
   .dynamic-layer i { transform: rotate(90deg); }
-  .timeline { margin-left: .4rem; } .about-meta div { padding: 1.2rem; }
+  .timeline { margin-left: .4rem; }
   .contact-cta span { font-size: 1rem; } footer { grid-template-columns: 1fr auto; } footer span:nth-child(2) { display: none; }
 }
 

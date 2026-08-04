@@ -145,7 +145,6 @@ export default function Home() {
         <div className="section-label"><span>03</span> HOW I WORK</div>
         <div className="section-heading"><h2 id="about-title">我不追求“更像 AI”，<br />我追求“更可用”。</h2><p>技术能力是起点，业务结果、可追溯性和风险边界才是产品完成的标志。</p></div>
         <div className="principles">{principles.map(([index, title, description]) => <article key={index}><span>{index}</span><h3>{title}</h3><p>{description}</p></article>)}</div>
-        <div className="about-meta"><div><span>EDUCATION</span><strong>大连东软信息学院 · 软件工程本科</strong></div><div><span>RECOGNITION</span><strong>国家励志奖学金 · “互联网+”创新创业大赛</strong></div></div>
       </section>
 
       <section className="contact" id="contact" aria-labelledby="contact-title">
