@@ -66,7 +66,7 @@ export default function Home() {
     <main id="top">
       <header className="site-nav">
         <a className="brand" href="#top" aria-label="Jealin 个人网站首页">
-          <span className="brand-mark">J</span><span>JEALIN + 赵佳琳 / AI PM</span>
+          <span className="brand-mark">J</span><span>JEALIN 赵佳琳 / AI PM</span>
         </a>
         <nav aria-label="主导航"><a href="#work">项目</a><a href="#experience">经历</a><a href="#about">关于</a></nav>
         <a className="availability" href="mailto:15241522260@163.com"><i aria-hidden="true" /> OPEN TO TALK</a>
@@ -79,8 +79,8 @@ export default function Home() {
         <div className="hero-topline"><span>PORTFOLIO / 2026</span><span>DALIAN, CHINA</span></div>
         <div className="hero-layout">
           <div className="hero-copy">
-            <p className="hero-name"><span>Jealin</span><i>+</i><strong>赵佳琳</strong></p>
             <h1 id="hero-title">让 AI 不只会回答，<span>还会完成任务。</span></h1>
+            <p className="hero-name" aria-label="Jealin 赵佳琳"><span>Jealin</span><strong>赵佳琳</strong></p>
             <p className="hero-lede">AI 产品经理，专注 RAG、Multi-Agent 与 Tool Calling。我把复杂业务拆成可解释、可验证、可安全交付的产品系统。</p>
             <div className="hero-actions">
               <a className="glow-button" href="#work"><span>查看核心项目</span><b aria-hidden="true">↘</b></a>
@@ -153,7 +153,7 @@ export default function Home() {
         <p className="section-label"><span>04</span> CONTACT</p><h2 id="contact-title">有一个复杂的 AI 产品问题？<br /><em>我们可以一起把它拆清楚。</em></h2>
         <a className="contact-cta" href="mailto:15241522260@163.com"><span>15241522260@163.com</span><b aria-hidden="true">↗</b></a>
       </section>
-      <footer><span>© 2026 JEALIN + 赵佳琳</span><span>AI PRODUCT MANAGER / DALIAN</span><a href="#top">BACK TO TOP ↑</a></footer>
+      <footer><span>© 2026 JEALIN 赵佳琳</span><span>AI PRODUCT MANAGER / DALIAN</span><a href="#top">BACK TO TOP ↑</a></footer>
     </main>
   );
 }

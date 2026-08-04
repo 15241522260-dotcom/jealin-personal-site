@@ -19,7 +19,7 @@ test("renders Jealin's portfolio content", async () => {
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
 
   const html = await response.text();
-  assert.match(html, /Jealin \+ 赵佳琳/);
+  assert.match(html, /Jealin 赵佳琳/);
   assert.match(html, /让 AI 不只会回答/);
   assert.match(html, /贷款业务/);
   assert.match(html, /P-buyer/);
