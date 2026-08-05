@@ -31,6 +31,8 @@ test("renders Jealin's portfolio content", async () => {
   assert.match(html, /Multi-Agent/);
   assert.match(html, /\/projects\/westlake-ai-service/);
   assert.match(html, /查看完整案例/);
+  assert.match(html, /github\.com\/15241522260-dotcom\?tab=repositories/);
+  assert.match(html, /查看我的 GitHub 代码作品/);
   assert.doesNotMatch(html, /PRODUCT FORM \/ INFORMATION ARCHITECTURE/);
   assert.doesNotMatch(html, /Your site is taking shape|READY TO EDIT|TO BE ADDED/);
 });

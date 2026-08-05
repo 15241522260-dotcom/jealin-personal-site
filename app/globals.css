@@ -351,6 +351,16 @@ h2 { margin: 0; color: var(--ink); font-size: clamp(3rem,6.3vw,7.4rem); font-wei
 .project-metrics strong { color: var(--card-accent); font-family: var(--mono); font-size: clamp(1.4rem,2.5vw,2.4rem); letter-spacing: -.05em; }
 .project-metrics span { margin-top: .6rem; color: var(--muted); font-size: .58rem; line-height: 1.45; }
 
+.github-showcase { display: grid; grid-template-columns: auto 1fr auto; gap: clamp(1.2rem,2.5vw,2.4rem); align-items: center; margin-top: clamp(1.2rem,2.5vw,2.2rem); padding: clamp(1.4rem,2.6vw,2.4rem); border: 1px solid rgba(139,92,246,.22); border-radius: 24px; background: linear-gradient(120deg,rgba(255,255,255,.78),rgba(238,230,255,.72)); box-shadow: 0 18px 55px rgba(91,61,137,.08); transition: border-color 200ms ease,box-shadow 200ms ease,transform 200ms ease; }
+.github-showcase:hover { border-color: rgba(139,92,246,.5); box-shadow: 0 24px 68px rgba(91,61,137,.16); transform: translateY(-4px); }
+.github-showcase-mark { display: grid; place-items: center; width: clamp(52px,5vw,68px); height: clamp(52px,5vw,68px); border: 1px solid rgba(139,92,246,.34); border-radius: 50%; background: radial-gradient(circle at 32% 28%,#fff,#e5d8ff 68%,#c9b2ff); color: var(--violet-deep); font-family: var(--mono); font-size: .72rem; font-weight: 800; letter-spacing: .06em; box-shadow: 0 0 28px rgba(139,92,246,.2); }
+.github-showcase-copy { display: flex; flex-direction: column; }
+.github-showcase-copy small { color: var(--violet-deep); font-family: var(--mono); font-size: .5rem; font-weight: 750; letter-spacing: .12em; }
+.github-showcase-copy strong { margin-top: .55rem; color: var(--ink); font-size: clamp(1.35rem,2.2vw,2.2rem); font-weight: 590; letter-spacing: -.04em; }
+.github-showcase-copy em { margin-top: .45rem; color: var(--muted); font-size: .78rem; font-style: normal; line-height: 1.55; }
+.github-showcase > b { color: var(--violet-deep); font-size: clamp(1.8rem,3vw,3rem); font-weight: 400; transition: transform 180ms ease; }
+.github-showcase:hover > b { transform: translate(5px,-5px); }
+
 .case-page { background: var(--bg); }
 .case-nav { position: sticky; top: 0; z-index: 60; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; min-height: 72px; padding: 0 clamp(1.2rem,3vw,3.5rem); border-bottom: 1px solid var(--line); background: rgba(248,244,255,.84); backdrop-filter: blur(20px) saturate(135%); }
 .case-nav .brand { justify-self: center; }
@@ -572,6 +582,9 @@ footer span:nth-child(2) { text-align: center; } footer a { justify-self: end; c
   .project-metrics { grid-template-columns: 1fr; }
   .project-metrics div { min-height: 86px; }
   .project-card-foot { align-items: flex-start; flex-direction: column; }
+  .github-showcase { grid-template-columns: auto 1fr; border-radius: 20px; }
+  .github-showcase > b { display: none; }
+  .github-showcase-copy em { font-size: .72rem; }
   .case-nav { min-height: 64px; }
   .project-hero { min-height: auto; }
   .project-hero-meta span:last-child { display: none; }

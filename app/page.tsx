@@ -68,7 +68,7 @@ export default function Home() {
         <a className="brand" href="#top" aria-label="Jealin 个人网站首页">
           <span className="brand-mark">J</span><span>JEALIN 赵佳琳 / AI PM</span>
         </a>
-        <nav aria-label="主导航"><a href="#work">项目</a><a href="#experience">经历</a><a href="#about">关于</a></nav>
+        <nav aria-label="主导航"><a href="#work">项目</a><a href="#experience">经历</a><a href="#about">关于</a><a href="https://github.com/15241522260-dotcom?tab=repositories" target="_blank" rel="noreferrer">GitHub ↗</a></nav>
         <a className="availability" href="mailto:15241522260@163.com"><i aria-hidden="true" /> OPEN TO TALK</a>
       </header>
 
@@ -131,6 +131,11 @@ export default function Home() {
             </article>
           ))}
         </div>
+        <a className="github-showcase" href="https://github.com/15241522260-dotcom?tab=repositories" target="_blank" rel="noreferrer" aria-label="在新标签页查看 Jealin 的 GitHub 代码作品">
+          <span className="github-showcase-mark" aria-hidden="true">GH</span>
+          <span className="github-showcase-copy"><small>MORE BUILT BY JEALIN</small><strong>查看我的 GitHub 代码作品</strong><em>这里记录了我把产品想法 coding 成真实作品的过程。</em></span>
+          <b aria-hidden="true">↗</b>
+        </a>
       </section>
 
       <section className="section experience" id="experience" aria-labelledby="experience-title">
