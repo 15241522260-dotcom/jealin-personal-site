@@ -17,11 +17,11 @@ export async function generateMetadata(): Promise<Metadata> {
   const requestHeaders = await headers();
   const host = requestHeaders.get("x-forwarded-host") ?? requestHeaders.get("host") ?? "localhost:3000";
   const protocol = requestHeaders.get("x-forwarded-proto") ?? (host.startsWith("localhost") ? "http" : "https");
-  const socialImage = `${protocol}://${host}/og-jealin-stars.png`;
+  const socialImage = `${protocol}://${host}/og-watercolor.png`;
 
   return {
     title: "Jealin 赵佳琳 — AI 产品经理",
-    description: "Jealin 赵佳琳的浅紫星空 AI 产品作品集：从用户问题、产品形态和信息架构，到 RAG、Agent 与安全交付。",
+    description: "Jealin 赵佳琳的水粉画风 AI 产品作品集：从用户问题、产品形态和信息架构，到 RAG、Agent 与安全交付。",
     openGraph: {
       title: "Jealin 赵佳琳 — AI 产品经理",
       description: "让 AI 不只会回答，还会完成任务。",
