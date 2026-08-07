@@ -78,9 +78,11 @@ export default function Home() {
       </header>
 
       <section className="hero" aria-labelledby="hero-title">
-        <div className="star-field star-field--near" aria-hidden="true" />
-        <div className="star-field star-field--far" aria-hidden="true" />
-        <div className="hero-orbit" aria-hidden="true" />
+        <div className="wind-scene" aria-hidden="true">
+          <div className="water-motion">{Array.from({ length: 7 }, (_, index) => <span key={`ripple-${index}`} />)}</div>
+          <div className="flower-motion">{Array.from({ length: 15 }, (_, index) => <span key={`flower-${index}`}><i /></span>)}</div>
+          <div className="petal-drift">{Array.from({ length: 8 }, (_, index) => <span key={`petal-${index}`} />)}</div>
+        </div>
         <div className="hero-topline"><span>PORTFOLIO / 2026</span><span>DALIAN, CHINA</span></div>
         <div className="hero-layout">
           <div className="hero-copy">
@@ -92,20 +94,6 @@ export default function Home() {
               <a className="text-link" href="mailto:15241522260@163.com">联系我 <span aria-hidden="true">↗</span></a>
             </div>
           </div>
-          <aside className="system-panel" aria-label="AI 产品能力星图">
-            <div className="panel-scan" aria-hidden="true" />
-            <div className="panel-head"><span>PRODUCT UNIVERSE</span><span>IN ORBIT</span></div>
-            <div className="cosmos-map" aria-hidden="true">
-              <span className="cosmos-ring cosmos-ring--one" /><span className="cosmos-ring cosmos-ring--two" /><span className="cosmos-ring cosmos-ring--three" />
-              <span className="cosmos-axis cosmos-axis--x" /><span className="cosmos-axis cosmos-axis--y" />
-              <span className="orbit-dot orbit-dot--one" /><span className="orbit-dot orbit-dot--two" /><span className="orbit-dot orbit-dot--three" />
-              <div className="core-planet"><span>✦</span></div>
-              <span className="satellite satellite--star">✦</span><span className="satellite satellite--chart">▥</span><span className="satellite satellite--person">●</span>
-              <span className="satellite satellite--check">✓</span><span className="satellite satellite--pie">◔</span><span className="satellite satellite--flow">⌘</span><span className="satellite satellite--chat">•••</span>
-              <span className="mini-planet mini-planet--one" /><span className="mini-planet mini-planet--two" />
-            </div>
-            <div className="panel-foot"><span>DISCOVER → DECIDE → DELIVER</span><span>TRACEABLE BY DESIGN</span></div>
-          </aside>
         </div>
         <div className="signal-ticker" aria-label="核心能力"><div>{[...productSignals, ...productSignals].map((signal, index) => <span key={`${signal}-${index}`}>{signal}<i aria-hidden="true" /></span>)}</div></div>
       </section>
