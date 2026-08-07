@@ -754,7 +754,7 @@ footer { background: #eee7d9; }
   inset: -2.5%;
   background:
     linear-gradient(to bottom,rgba(232,246,255,.04) 0 44%,rgba(67,95,79,.04) 67%,rgba(31,79,96,.08) 100%),
-    url("/hero-meadow-watercolor.png") center bottom / cover no-repeat;
+    url("/hero-meadow-closeup.png") center bottom / cover no-repeat;
   content: "";
   transform-origin: 52% 70%;
   animation: ken-burns 22s cubic-bezier(.22,.61,.36,1) infinite alternate;
@@ -885,7 +885,7 @@ footer { background: #eee7d9; }
   right: 0;
   bottom: 0;
   left: 0;
-  height: 25%;
+  height: 12%;
   overflow: hidden;
   background: repeating-linear-gradient(176deg,transparent 0 15px,rgba(235,248,255,.13) 17px,transparent 20px 35px);
   mix-blend-mode: screen;
@@ -916,7 +916,7 @@ footer { background: #eee7d9; }
 .water-motion span:nth-child(6) { top: 84%; left: -4%; width: 36%; animation-delay: -7s; }
 .water-motion span:nth-child(7) { top: 91%; left: 72%; width: 25%; animation-delay: -4s; }
 
-.flower-motion { position: absolute; right: 0; bottom: 22%; left: 0; height: 26%; }
+.flower-motion { position: absolute; right: 0; bottom: 10%; left: 0; height: 38%; }
 .flower-motion > span {
   position: absolute;
   bottom: 0;
@@ -1030,9 +1030,9 @@ footer { background: #eee7d9; }
   .hero-name { margin-top: 0; }
   .hero-copy h1 { margin-top: 1rem; font-size: clamp(2rem,9vw,3.2rem); }
   .hero-lede { margin-top: 1rem; padding: .35rem; font-size: .8rem; line-height: 1.55; }
-  .flower-motion { bottom: 22%; height: 23%; }
+  .flower-motion { bottom: 10%; height: 36%; }
   .flower-motion > span:nth-child(even) { display: none; }
-  .water-motion { height: 23%; }
+  .water-motion { height: 12%; }
   .fx-film-grain { opacity: .12; }
   .fx-light-leak { width: 85vw; }
   .glow-button { width: 100%; } .text-link { width: max-content; }
