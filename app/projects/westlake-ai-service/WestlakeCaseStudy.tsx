@@ -19,6 +19,15 @@ export default function WestlakeCaseStudy() {
         <article><span className="case-kicker">PRIMARY CONTEXT</span><strong>桌面 Web · 账户信息并行核对</strong><p>用户需要一边查看账户概览或付款记录，一边与 AI 对话，不能被迫离开当前任务。</p></article>
       </div>
 
+      <div className="case-metrics" aria-label="Westlake 项目上线门槛与目标">
+        <div><small>上线门槛</small><strong>≥90%</strong><span>知识回答正确率</span></div>
+        <div><small>上线门槛</small><strong>≥98%</strong><span>高风险识别召回率</span></div>
+        <div><small>上线门槛</small><strong>100%</strong><span>账户关键字段一致率</span></div>
+        <div><small>产品目标</small><strong>50%</strong><span>自助解决率</span></div>
+        <div><small>效果预估</small><strong>60%</strong><span>减少可避免人工来电</span></div>
+      </div>
+      <div className="case-guardrail"><span>SAFETY BOUNDARY</span><p>AI 只提供基本业务查询和标准说明，不执行写操作，也不承诺费用减免或延期还款；付款争议、逾期协商、征信、欺诈等高风险场景，以及低置信度问题统一转人工处理。</p></div>
+
       <div className="shape-layout">
         <div className="shape-copy">
           <p className="case-kicker">PRODUCT FORM</p><h3>跨页面悬浮窗口，<br />配合情境提示。</h3>

@@ -19,9 +19,9 @@ export default function WestlakeProjectPage() {
         <div className="star-field star-field--near" aria-hidden="true" /><div className="star-field star-field--far" aria-hidden="true" /><div className="project-hero-orbit" aria-hidden="true" />
         <div className="project-hero-meta"><span>CASE STUDY / 01</span><span>FINTECH · AI SERVICE</span></div>
         <div className="project-hero-copy">
-          <p className="eyebrow">WESTLAKE FINANCIAL / 0→1</p>
+          <p className="eyebrow">WESTLAKE FINANCIAL / 0→1 / 2025.08—2026.06</p>
           <h1 id="project-title">贷款业务<br /><span>智能客服</span></h1>
-          <p>把账户查询、状态解释和人工兜底，嵌入用户正在完成的还款任务。</p>
+          <p>在 MyAccount 接入 AI 文本客服，分流重复来电，并以账户只读、风险识别与人工兜底守住金融安全边界。</p>
         </div>
         <div className="project-hero-proof">
           <div><span>ROLE</span><strong>AI 产品经理</strong></div><div><span>PRIMARY DEVICE</span><strong>Desktop Web</strong></div><div><span>CORE</span><strong>RAG · Read-only Tool · Guardrails</strong></div>

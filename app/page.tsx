@@ -3,14 +3,19 @@ const productSignals = ["RAG", "MULTI-AGENT", "TOOL CALLING", "SQL GENERATION", 
 const projects = [
   {
     id: "01",
-    eyebrow: "FINTECH / AI SERVICE",
+    eyebrow: "FINTECH / AI SERVICE · 2025.08—2026.06",
     title: "贷款业务\n智能客服",
-    statement: "把账户查询、状态解释和人工兜底，嵌入用户正在完成的还款任务。",
-    context: "客户必须把自然语言问题转换成菜单路径，再自行理解多个金额、日期和付款状态；判断失败后还要向人工重复说明背景。",
-    contribution: "定义桌面 Web 悬浮窗＋页面情境提示的产品形态，完成任务型 IA，并设计“意图识别 → 风险判断 → RAG / 只读查询 → 确定性展示 → 人工保底”链路。",
-    tags: ["0→1", "Product Form", "Information Architecture", "RAG"],
+    statement: "在 MyAccount 接入 AI 文本客服，分流重复来电，并用账户只读与人工兜底守住金融安全边界。",
+    context: "WFS 客服承接还款、账单、账户状态、提前结清及保险产权等重复咨询；电话渠道压力大，用户又需要可核对的账户答案。",
+    contribution: "划分一般咨询、账户只读查询与敏感高风险事项；设计文档治理、混合检索＋Rerank、账户只读 API、话术回答及人工审核/转人工链路。",
+    tags: ["0→1", "RAG", "Read-only API", "Guardrails"],
     accent: "violet",
     href: "/projects/westlake-ai-service",
+    metrics: [
+      ["≥90%", "知识回答正确率门槛"],
+      ["≥98%", "高风险识别召回率"],
+      ["100%", "账户关键字段一致率"],
+    ],
   },
   {
     id: "02",
@@ -24,9 +29,9 @@ const projects = [
   },
   {
     id: "03",
-    eyebrow: "INSURANCE / AI TESTING",
+    eyebrow: "INSURANCE / AI TESTING · 2025.04—07",
     title: "数据中台\nAI 测试助手",
-    statement: "先生成可追溯测试分析，再生成 SQL，把百条规模用例从人工梳理变成人机协同。",
+    statement: "先生成可追溯测试分析，再生成 SQL，将测试分析与用例编写工时从 40h 降至 7.6h。",
     context: "面向保险数据中台测试团队，解决百条规模用例依赖人工梳理、重复编写及结果难追溯的问题。",
     contribution: "聚合语雀需求与模型文档、元数据、历史用例和规则；先生成可追溯测试分析，再生成 SQL，经人工审核后批量执行。",
     tags: ["MVP / PoC", "RAG", "SQL Generation", "Human-in-the-loop"],
@@ -35,23 +40,29 @@ const projects = [
     metrics: [
       ["93.3%", "关键规则覆盖率"],
       ["82.4%", "AI 候选用例直接采纳率"],
-      ["88.7%", "SQL 首次执行成功率"],
+      ["88%", "SQL 首次执行成功率"],
     ],
   },
 ];
 
 const experience = [
   {
-    period: "2025.04 — 2026.07",
+    period: "2025.04 — 2026.06",
     company: "大连水滴科技服务有限公司",
     role: "AI 产品经理",
-    summary: "负责贷款业务智能客服从 0 到 1 产品方案，并推进保险数据中台 AI 测试助手 PoC：设计可追溯测试分析、SQL 生成与人工审核链路，通过 100 条合成金标用例完成方案验证。",
+    summary: "主导 Westlake Financial 智能客服平台从 0 到 1 设计，完成意图体系、RAG / 账户只读查询、合规与 Bad Case 复盘机制；同时协助调研保险数据中台测试流程并推进 AI 测试助手 PoC。",
+  },
+  {
+    period: "2024.08 — 2024.12",
+    company: "商线科技有限公司",
+    role: "AI 产品经理实习生",
+    summary: "参与 ShopLine Sidekick 商家后台 AI Copilot，帮助搭建包含维度、主指标、诊断指标与证据的指标树，并分析 Bad Case 严重度与归因。",
   },
 ];
 
 const principles = [
   ["01", "先定义问题", "先找到真正的业务矛盾，再决定需要模型、规则还是人工。"],
-  ["02", "让证据进入系统", "关键结论要有来源、版本、状态和适用边界，而不是仅靠模型语气可信。"],
+  ["02", "让评测驱动迭代", "用覆盖率、采纳率、执行成功率和 Bad Case 归因定位问题，而不是只凭主观感受。"],
   ["03", "把风险设计进流程", "低置信度、冲突和高风险场景必须有确定的阻断、澄清或转人工路径。"],
 ];
 
@@ -75,7 +86,7 @@ export default function Home() {
           <div className="hero-copy">
             <h1 id="hero-title">让 AI 不只会回答，<span>还会完成任务。</span></h1>
             <p className="hero-name" aria-label="Jealin 赵佳琳"><span>Jealin</span><strong>赵佳琳</strong></p>
-            <p className="hero-lede">AI 产品经理，专注 RAG、Multi-Agent 与 Tool Calling。我把复杂业务拆成可解释、可验证、可安全交付的产品系统。</p>
+            <p className="hero-lede">AI 产品经理，具备从业务场景拆解、需求定义、方案设计到 MVP 验收的完整实践；覆盖金融客服、电商客服 Copilot 与数据测试，并以评测、人工门禁和审计机制保障可追溯交付。</p>
             <div className="hero-actions">
               <a className="glow-button" href="#work"><span>查看核心项目</span><b aria-hidden="true">↘</b></a>
               <a className="text-link" href="mailto:15241522260@163.com">联系我 <span aria-hidden="true">↗</span></a>
@@ -117,7 +128,7 @@ export default function Home() {
                 <div><span className="detail-label">CONTEXT</span><p>{project.context}</p></div>
                 <div><span className="detail-label">MY CONTRIBUTION</span><p>{project.contribution}</p></div>
               </div>
-              {project.metrics && <div className="project-metrics" aria-label="方案验证指标">{project.metrics.map(([value, label]) => <div key={label}><strong>{value}</strong><span>{label}</span></div>)}</div>}
+              {project.metrics && <div className="project-metrics" aria-label="项目关键指标">{project.metrics.map(([value, label]) => <div key={label}><strong>{value}</strong><span>{label}</span></div>)}</div>}
               <div className="project-card-foot">
                 <div className="tag-row">{project.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
                 {project.href && <span className="view-case">查看完整案例 <b aria-hidden="true">↗</b></span>}
