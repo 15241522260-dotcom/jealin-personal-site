@@ -7,7 +7,7 @@
 ## 核心内容
 
 - Westlake Financial 贷款业务智能客服
-- AI 购买决策助手
+- ShopLine Sidekick 商家后台 AI Copilot
 - 数据中台 AI 测试助手
 - AI 产品经历与工作方法
 - GitHub 代码作品入口

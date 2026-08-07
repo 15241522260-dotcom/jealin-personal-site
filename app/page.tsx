@@ -14,12 +14,12 @@ const projects = [
   },
   {
     id: "02",
-    eyebrow: "COMMERCE / DECISION AGENT",
-    title: "P-buyer\n智能导购",
-    statement: "让 AI 从“介绍商品”走向“帮用户完成购买决策”。",
-    context: "面向宠物、3C、母婴与家装等高决策成本品类，解决参数难懂、选择过载和规格不兼容。",
-    contribution: "设计 Coordinator、导购、RAG 问答、多意图编排与转人工 5 类 Agent，定义受控 A2A、实时价库 Tool、硬约束、证据状态和 L0–L3 推荐分级。",
-    tags: ["PRD", "Multi-Agent", "A2A", "Explainable AI"],
+    eyebrow: "SHOPLINE / AI COPILOT · 2024.08—12",
+    title: "ShopLine Sidekick\n商家后台 AI\nCopilot",
+    statement: "让 AI 先提供可采纳的回复建议，客服保留最终判断。",
+    context: "面向电商客服的 AI 坐席助手，以建议回复采纳率为核心指标，并围绕首次反应时长、平均处理时长、知识检索命中率和事实正确率评估人效与回答质量。",
+    contribution: "设计文档清洗、语义切片、Metadata 标注、版本管理及失效知识处理机制；明确 AI 只提供答案建议，不替代客服做最终判断。",
+    tags: ["RAG", "AI Copilot", "Metadata", "Human-in-the-loop"],
     accent: "blue",
   },
   {
@@ -51,7 +51,7 @@ const experience = [
     period: "2024.08 — 2024.12",
     company: "天津中科创达科技有限公司",
     role: "AI 产品经理实习生",
-    summary: "完成 P-buyer 智能导购的用户/企业需求、角色流程、产品架构、Prompt 契约、指标体系与风险护栏设计。",
+    summary: "参与 ShopLine Sidekick 商家后台 AI Copilot：设计知识文档清洗、语义切片、Metadata 标注、版本与失效知识管理机制，并以建议回复采纳率为核心指标评估产品效果。",
   },
 ];
 
@@ -111,7 +111,7 @@ export default function Home() {
 
       <section className="section work" id="work" aria-labelledby="work-title">
         <div className="section-label"><span>01</span> SELECTED WORK</div>
-        <div className="section-heading"><h2 id="work-title">用项目证明，<br />AI 如何进入业务。</h2><p>三个项目，覆盖客户服务、购买决策与测试生产力，展示 AI 从交互到执行的不同产品形态。</p></div>
+        <div className="section-heading"><h2 id="work-title">用项目证明，<br />AI 如何进入业务。</h2><p>三个项目，覆盖金融客户服务、电商客服 Copilot 与测试生产力，展示 AI 从交互到执行的不同产品形态。</p></div>
         <div className="project-list">
           {projects.map((project) => (
             <article className={`project-card project-card--${project.accent}${project.href ? " project-card--clickable" : ""}${project.wide ? " project-card--wide" : ""}`} key={project.id}>

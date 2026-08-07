@@ -22,7 +22,10 @@ test("renders Jealin's portfolio content", async () => {
   assert.match(html, /Jealin 赵佳琳/);
   assert.match(html, /让 AI 不只会回答/);
   assert.match(html, /贷款业务/);
-  assert.match(html, /P-buyer/);
+  assert.match(html, /ShopLine Sidekick/);
+  assert.match(html, /商家后台 AI/);
+  assert.match(html, /建议回复采纳率/);
+  assert.doesNotMatch(html, /P-buyer/);
   assert.match(html, /数据中台/);
   assert.match(html, /AI 测试助手/);
   assert.match(html, /93\.3%/);
