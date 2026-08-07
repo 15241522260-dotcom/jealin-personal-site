@@ -83,6 +83,13 @@ export default function Home() {
           <div className="flower-motion">{Array.from({ length: 15 }, (_, index) => <span key={`flower-${index}`}><i /></span>)}</div>
           <div className="petal-drift">{Array.from({ length: 8 }, (_, index) => <span key={`petal-${index}`} />)}</div>
         </div>
+        <div className="cinematic-fx" aria-hidden="true">
+          <span className="fx-light-leak fx-light-leak--one" />
+          <span className="fx-light-leak fx-light-leak--two" />
+          <span className="fx-focus-wash" />
+          <span className="fx-film-grain" />
+          <span className="fx-vignette" />
+        </div>
         <div className="hero-topline"><span>PORTFOLIO / 2026</span><span>DALIAN, CHINA</span></div>
         <div className="hero-layout">
           <div className="hero-copy">
