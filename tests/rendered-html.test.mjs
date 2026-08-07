@@ -26,6 +26,8 @@ test("renders Jealin's portfolio content", async () => {
   assert.match(html, /商家后台 AI/);
   assert.match(html, /建议回复采纳率/);
   assert.doesNotMatch(html, /P-buyer/);
+  assert.doesNotMatch(html, /天津中科创达科技有限公司/);
+  assert.doesNotMatch(html, /AI 产品经理实习生/);
   assert.match(html, /数据中台/);
   assert.match(html, /AI 测试助手/);
   assert.match(html, /93\.3%/);

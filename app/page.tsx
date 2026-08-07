@@ -47,12 +47,6 @@ const experience = [
     role: "AI 产品经理",
     summary: "负责贷款业务智能客服从 0 到 1 产品方案，并推进保险数据中台 AI 测试助手 PoC：设计可追溯测试分析、SQL 生成与人工审核链路，通过 100 条合成金标用例完成方案验证。",
   },
-  {
-    period: "2024.08 — 2024.12",
-    company: "天津中科创达科技有限公司",
-    role: "AI 产品经理实习生",
-    summary: "参与 ShopLine Sidekick 商家后台 AI Copilot：设计知识文档清洗、语义切片、Metadata 标注、版本与失效知识管理机制，并以建议回复采纳率为核心指标评估产品效果。",
-  },
 ];
 
 const principles = [
