@@ -1,12 +1,12 @@
-# Jaelin 赵佳琳｜AI 产品经理个人网站
+# Jaelin赵佳琳｜AI 产品经理个人网站
 
-这是 Jaelin 赵佳琳的个人作品集网站。当前版本采用浅色未来科技视觉，以“鼠标即光源”为核心交互概念，集中展示 AI 产品项目、工作经历与产品能力。
+这是 Jaelin赵佳琳的个人作品集网站。当前版本采用浅色未来科技视觉，以“鼠标即光源”为核心交互概念，集中展示 AI 产品项目、工作经历与产品能力。
 
 ## 核心内容
 
-- Westlake Financial 贷款业务智能客服
-- ShopLine Sidekick 商家后台 AI Copilot
-- 数据中台 AI 测试助手
+- 秒懂（1-N）：Agent Workflow、RAG、AI Evaluation 与成本治理
+- Mio（0-1）：AI Agent、Skills 与办公自动化
+- Fuzozo（0-1）：AI 情感陪伴软硬一体体验
 - AI 产品经历与工作方法
 - GitHub 代码作品入口
 
